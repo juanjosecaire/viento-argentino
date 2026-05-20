@@ -1,0 +1,70 @@
+---
+description: Publicar el sitio Viento Argentino — SEO, enlaces, GitHub y Vercel
+globs: "**/*.html,vercel.json,README.md"
+alwaysApply: false
+---
+
+# Publicación — Viento Argentino
+
+El usuario publica desde **este chat** (o uno dedicado a deploy). Al pedir publicar, desplegar o subir cambios, seguí este flujo completo.
+
+## Infraestructura
+
+```text
+Código local → git push (rama main) → GitHub → Vercel (deploy automático) → vientoargentino.com
+```
+
+| Pieza | Detalle |
+|-------|---------|
+| **Repositorio** | `https://github.com/juanjosecaire/viento-argentino.git` |
+| **Rama de producción** | `main` |
+| **Hosting** | Vercel (sitio estático, sin build) |
+| **Dominio** | `vientoargentino.com` y `www.vientoargentino.com` |
+| **Config Vercel** | Framework **Other**, Build Command vacío, Output Directory `.` |
+| **URLs limpias** | `vercel.json` con `"cleanUrls": true` → `/potencial-eolico` sirve `potencial-eolico.html` |
+
+No versionar `documentos/` (PDFs locales); está en `.gitignore`.
+
+## Estructura actual del sitio
+
+- `index.html` — portada (`/`)
+- `potencial-eolico.html` — potencial eólico (`/potencial-eolico`)
+
+Marca visible: **Viento Argentino**. No enlazar ni ofrecer descarga de PDFs.
+
+## Checklist antes de cada publicación
+
+1. **Cambios listos** — Revisar diff; solo archivos del sitio.
+2. **Nueva página HTML** (si aplica):
+   - Añadir `<title>` y `<meta name="description">` únicos en español, alineados al dominio y al contenido de la página.
+   - Formato sugerido del title: `Tema de la página | Viento Argentino`.
+   - Description: 1–2 frases concretas (150–160 caracteres aprox.), sin relleno genérico.
+   - Actualizar navbar y footer en **todas** las páginas existentes con enlace a la nueva ruta.
+3. **Enlaces** — Verificar en todas las páginas:
+   - Brand → `/` o `index.html`
+   - Enlaces internos coherentes con `cleanUrls` (p. ej. `potencial-eolico.html` o `/potencial-eolico`)
+   - Sin enlaces rotos a `nuevo0.html`, `nuevo1.html`, `documentos/*.pdf` ni rutas obsoletas
+   - Botones del hero y footer apuntan a secciones o páginas válidas
+4. **Git** — Solo commitear si el usuario lo pide explícitamente:
+   ```bash
+   git add .
+   git commit -m "mensaje claro del cambio"
+   git push origin main
+   ```
+5. **Post-push** — Recordar que Vercel despliega solo; sugerir comprobar el deployment en el dashboard y probar producción:
+   - `https://vientoargentino.com/`
+   - `https://vientoargentino.com/potencial-eolico` (y cualquier página nueva)
+
+## Meta tags — ejemplo
+
+**Portada (`index.html`):**
+```html
+<title>Viento Argentino | Energía eólica y amoníaco verde en la Patagonia</title>
+<meta name="description" content="Propuesta para transformar el viento patagónico en hidrógeno verde, amoníaco verde y fertilizantes ecológicos. Hub industrial, marco RIGI e inversión nacional en la Patagonia.">
+```
+
+**Página secundaria:** title y description específicos del tema; incluir `| Viento Argentino` en el title cuando encaje.
+
+## DNS (solo si el dominio falla)
+
+En Namecheap → Advanced DNS, los valores deben coincidir con lo que muestra Vercel en **Settings → Domains** del proyecto (IP y CNAME pueden cambiar por proyecto). Refrescar dominio en Vercel tras actualizar DNS.
