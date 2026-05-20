@@ -21,13 +21,15 @@ Código local → git push (rama main) → GitHub → Vercel (deploy automático
 | **Hosting** | Vercel (sitio estático, sin build) |
 | **Dominio** | `vientoargentino.com` y `www.vientoargentino.com` |
 | **Config Vercel** | Framework **Other**, Build Command vacío, Output Directory `.` |
-| **URLs limpias** | `vercel.json` con `"cleanUrls": true` → `/potencial-eolico` sirve `potencial-eolico.html` |
+| **URLs limpias** | `vercel.json` con `"cleanUrls": true` |
 
 ## Estructura actual del sitio
 
-- `index.html` — portada (`/`)
-- `potencial-eolico.html` — potencial eólico (`/potencial-eolico`)
+- `index.html` — potencial eólico, inicio del sitio (`/`)
+- `green-ammonia-hub.html` — programa Patagonia Green Ammonia Hub (`/green-ammonia-hub`)
 - `documentos/` — PDFs publicados en producción
+
+Redirección permanente: `/potencial-eolico` → `/`.
 
 Marca visible: **Viento Argentino**. Cada página enlaza su PDF en `documentos/` (usar `%20` en URLs si el nombre tiene espacios).
 
@@ -41,9 +43,9 @@ Marca visible: **Viento Argentino**. Cada página enlaza su PDF en `documentos/`
    - Actualizar navbar y footer en **todas** las páginas existentes con enlace a la nueva ruta.
 3. **Enlaces** — Verificar en todas las páginas:
    - Brand → `/` o `index.html`
-   - Enlaces internos coherentes con `cleanUrls` (p. ej. `potencial-eolico.html` o `/potencial-eolico`)
-   - Sin enlaces rotos a `nuevo0.html`, `nuevo1.html` ni rutas obsoletas
-   - PDFs accesibles: `documentos/Patagonia%20Green%20Ammonia%20Hub.pdf` (portada) y `documentos/Potencial%20viento%20patagonia.pdf` (potencial eólico)
+   - Enlaces internos coherentes con `cleanUrls` (p. ej. `green-ammonia-hub.html` o `/green-ammonia-hub`)
+   - Sin enlaces rotos a `potencial-eolico.html`, `nuevo0.html`, `nuevo1.html` ni rutas obsoletas
+   - PDFs accesibles: `documentos/Potencial%20viento%20patagonia.pdf` (portada `/`) y `documentos/Patagonia%20Green%20Ammonia%20Hub.pdf` (hub)
    - Botones del hero y footer apuntan a secciones o páginas válidas
 4. **Git** — Solo commitear si el usuario lo pide explícitamente:
    ```bash
@@ -53,17 +55,21 @@ Marca visible: **Viento Argentino**. Cada página enlaza su PDF en `documentos/`
    ```
 5. **Post-push** — Recordar que Vercel despliega solo; sugerir comprobar el deployment en el dashboard y probar producción:
    - `https://vientoargentino.com/`
-   - `https://vientoargentino.com/potencial-eolico` (y cualquier página nueva)
+   - `https://vientoargentino.com/green-ammonia-hub` (y cualquier página nueva)
 
 ## Meta tags — ejemplo
 
-**Portada (`index.html`):**
+**Portada (`index.html`, potencial eólico):**
 ```html
-<title>Viento Argentino | Energía eólica y amoníaco verde en la Patagonia</title>
-<meta name="description" content="Propuesta para transformar el viento patagónico en hidrógeno verde, amoníaco verde y fertilizantes ecológicos. Hub industrial, marco RIGI e inversión nacional en la Patagonia.">
+<title>Viento Argentino | Potencial eólico en la Patagonia</title>
+<meta name="description" content="Evaluación del recurso eólico en la Patagonia argentina: 9.600 TWh anuales, equivalencia con petróleo, comparación con Vaca Muerta, el PBI y la energía nuclear mundial.">
 ```
 
-**Página secundaria:** title y description específicos del tema; incluir `| Viento Argentino` en el title cuando encaje.
+**Hub (`green-ammonia-hub.html`):**
+```html
+<title>Patagonia Green Ammonia Hub | Viento Argentino</title>
+<meta name="description" content="Propuesta para transformar el viento patagónico en hidrógeno verde, amoníaco verde y fertilizantes ecológicos...">
+```
 
 ## DNS (solo si el dominio falla)
 

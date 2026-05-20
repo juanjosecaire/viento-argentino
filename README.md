@@ -6,13 +6,15 @@ Sitio estático sobre el potencial eólico patagónico y la propuesta Patagonia 
 
 ## Páginas
 
-- `/` — Portada del proyecto
-- `/potencial-eolico` — Análisis del potencial eólico en la Patagonia
+- `/` — Potencial eólico en la Patagonia (inicio del sitio)
+- `/green-ammonia-hub` — Programa Patagonia Green Ammonia Hub
+
+La ruta `/potencial-eolico` redirige a `/` (URL anterior).
 
 ## Documentos (PDF)
 
-- `documentos/Patagonia Green Ammonia Hub.pdf` — documento del hub (enlazado desde la portada)
-- `documentos/Potencial viento patagonia.pdf` — estudio de potencial eólico (enlazado desde `/potencial-eolico`)
+- `documentos/Potencial viento patagonia.pdf` — estudio de potencial eólico (enlazado desde la portada)
+- `documentos/Patagonia Green Ammonia Hub.pdf` — documento del hub (enlazado desde `/green-ammonia-hub`)
 
 ## Despliegue en Vercel
 

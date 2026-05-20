@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viento Argentino | Energía eólica y amoníaco verde en la Patagonia</title>
-    <meta name="description" content="Propuesta para transformar el viento patagónico en hidrógeno verde, amoníaco verde y fertilizantes ecológicos. Hub industrial, marco RIGI e inversión nacional en la Patagonia.">
+    <title>Viento Argentino | Potencial eólico en la Patagonia</title>
+    <meta name="description" content="Evaluación del recurso eólico en la Patagonia argentina: 9.600 TWh anuales, equivalencia con petróleo, comparación con Vaca Muerta, el PBI y la energía nuclear mundial.">
 
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,9 @@
             color: #f8fafc;
         }
         .accordion-body p,
-        .accordion-body li {
+        .accordion-body li,
+        .accordion-body td,
+        .accordion-body th {
             color: #f8fafc;
         }
         .lead-copy {
@@ -66,6 +68,10 @@
             background: #2563eb;
             border-color: #2563eb;
         }
+        .summary-table {
+            background: rgba(15, 23, 42, 0.45);
+            border-color: rgba(148, 163, 184, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -82,8 +88,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="potencial-eolico.html">Potencial eólico</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#rutinaAccordion">Proyecto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="green-ammonia-hub.html">Patagonia Green Ammonia Hub</a></li>
                 </ul>
             </div>
         </div>
@@ -95,13 +100,16 @@
 
                 <!-- Header -->
                 <div class="hero-card rounded-4 p-4 p-md-5 text-center mb-5">
-                    <h1 class="display-4 fw-bold mb-3">Viento Argentino</h1>
-                    <p class="lead mb-4">Una propuesta para transformar el viento patagónico en energía, hidrógeno verde, amoníaco verde y fertilizantes ecológicos competitivos para el mundo.</p>
+                    <h1 class="display-4 fw-bold mb-3">Potencial del viento en la Patagonia</h1>
+                    <p class="lead mb-4">Evaluación del recurso eólico patagónico y su equivalencia económica en dólares frente a combustibles fósiles, Vaca Muerta, el PBI y la energía nuclear mundial.</p>
                     <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-                        <a href="#rutinaAccordion" class="btn btn-primary btn-lg px-4">
-                            Ver resumen del proyecto
+                        <a href="#potencialAccordion" class="btn btn-primary btn-lg px-4">
+                            Ver resumen del estudio
                         </a>
-                        <a href="documentos/Patagonia%20Green%20Ammonia%20Hub.pdf" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
+                        <a href="green-ammonia-hub.html" class="btn btn-outline-light btn-lg px-4">
+                            <i class="bi bi-flask"></i> Programa Patagonia Green Ammonia Hub
+                        </a>
+                        <a href="documentos/Potencial%20viento%20patagonia.pdf" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
                             <i class="bi bi-file-earmark-pdf"></i> Leer documento (PDF)
                         </a>
                     </div>
@@ -111,133 +119,110 @@
                 <div class="row g-3 mb-5">
                     <div class="col-md-4">
                         <div class="metric-card p-4 text-center">
-                            <strong>0,2 %</strong>
-                            <span>del potencial eólico patagónico estaría actualmente aprovechado, según el planteo del proyecto.</span>
+                            <strong>9.600 TWh</strong>
+                            <span>potencial eólico anual estimado en la Patagonia argentina.</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="metric-card p-4 text-center">
-                            <strong>5-15 GW</strong>
-                            <span>de nueva capacidad eólica propuesta para una primera escala industrial del hub.</span>
+                            <strong>945.000 M USD</strong>
+                            <span>valor económico equivalente en petróleo (Brent ~67 USD/barril).</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="metric-card p-4 text-center">
-                            <strong>30 años</strong>
-                            <span>de estabilidad fiscal y regulatoria posible bajo el régimen RIGI.</span>
+                            <strong>68×</strong>
+                            <span>el consumo eléctrico anual total de Argentina (~140 TWh).</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Accordion -->
-                <div class="accordion" id="rutinaAccordion">
+                <div class="accordion" id="potencialAccordion">
 
-                    <!-- Viento -->
+                    <!-- Potencial del viento -->
                     <div class="accordion-item mb-3 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dia1">
-                                <strong><i class="bi bi-wind"></i> Viento: la mayor riqueza argentina</strong>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sec1">
+                                <strong><i class="bi bi-wind"></i> Potencial del viento en la Patagonia Argentina</strong>
                             </button>
                         </h2>
-                        <div id="dia1" class="accordion-collapse collapse show" data-bs-parent="#rutinaAccordion">
+                        <div id="sec1" class="accordion-collapse collapse show" data-bs-parent="#potencialAccordion">
                             <div class="accordion-body">
                                 <p class="lead-copy mb-3">
-                                    Para los especialistas en energía, el viento en la región Patagónica es uno de los mejores del mundo para producir energía eólica. Tiene promedios de velocidad muy superiores a la media mundial y una persistencia que puede superar el 50 % o 60 %.
+                                    Según estudios citados en el análisis, el potencial eólico total anual de la Patagonia argentina se estima en aproximadamente <strong>9.600 TWh</strong> de electricidad generable. El cálculo considera entre 4.100 y 5.200 horas de carga plena al año y velocidades medias del viento superiores a 9 m/s.
                                 </p>
                                 <p class="lead-copy mb-3">
-                                    Además, la Patagonia cuenta con una disponibilidad de espacio prácticamente ilimitada para instalar parques eólicos, con menor oposición territorial que en regiones densamente pobladas como Europa. Esta combinación de viento, tierra y salida atlántica puede convertirse en una ventaja estratégica para Argentina.
+                                    El recurso se concentra principalmente en Chubut, Santa Cruz y Río Negro, donde el viento es uno de los mejores del mundo. A escala nacional, ese potencial teórico equivale a unas <strong>68 veces</strong> el consumo eléctrico anual de Argentina, cercano a 140 TWh.
                                 </p>
                                 <p class="lead-copy mb-0">
-                                    Esta web propone un plan para radicar industrias que quieran sustituir energías fósiles por energía eólica patagónica. La primera tarea es dimensionar la riqueza potencial del viento si se lo transforma en electricidad, hidrógeno verde, amoníaco verde y fertilizantes ecológicos.
+                                    El objetivo del análisis es dimensionar ese recurso no solo en energía, sino también en términos económicos: cuánto petróleo equivalente representaría y qué significa en dólares frente a otras referencias argentinas e internacionales.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Green Ammonia Hub -->
+                    <!-- Equivalencia petróleo -->
                     <div class="accordion-item mb-3 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia2">
-                                <strong><i class="bi bi-flask"></i> Patagonia Green Ammonia Hub</strong>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec2">
+                                <strong><i class="bi bi-droplet"></i> Equivalencia con petróleo</strong>
                             </button>
                         </h2>
-                        <div id="dia2" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                        <div id="sec2" class="accordion-collapse collapse" data-bs-parent="#potencialAccordion">
                             <div class="accordion-body">
                                 <p class="lead-copy">
-                                    El proyecto plantea crear un hub industrial para producir amoníaco verde a gran escala. El proceso parte de energía eólica, que alimenta electrolizadores para producir hidrógeno verde. Luego ese hidrógeno se combina con nitrógeno del aire para obtener amoníaco, base de fertilizantes ecológicos y posible combustible marítimo del futuro.
+                                    Para comparar con combustibles fósiles, el análisis toma el petróleo crudo como referencia. Supone que generar 9.600 TWh en plantas térmicas requeriría convertir energía térmica en electricidad con una eficiencia del 40 % (típica de plantas convencionales o de ciclo combinado).
                                 </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Producción integrada: parque eólico, electrólisis, síntesis de amoníaco y terminal de exportación.</li>
-                                    <li>Escala objetivo: entre 1 y 5 millones de toneladas anuales de amoníaco verde en etapas maduras.</li>
-                                    <li>Mercados posibles: Europa y Asia, donde crece la demanda de productos bajos en carbono.</li>
-                                    <li>Ventaja ambiental: reducción casi total de emisiones frente al amoníaco gris producido con gas fósil.</li>
+                                <ul class="topic-list">
+                                    <li>1 TWh de electricidad ≈ 2,5 TWh de energía térmica.</li>
+                                    <li>1 TWh térmico ≈ 588.235 barriles de petróleo (5,8 millones de BTU por barril).</li>
+                                    <li>1 TWh de electricidad ≈ 1.470.588 barriles de petróleo.</li>
+                                    <li>Para 9.600 TWh: ≈ <strong>14.117.640.000 barriles</strong> de petróleo equivalente.</li>
                                 </ul>
+                                <p class="lead-copy mb-0">
+                                    Con Brent a unos 67 USD por barril (dato del estudio), el valor total aproximado es de <strong>945.000 millones de USD</strong>: el petróleo que habría que importar o producir para igualar esa electricidad con fuentes fósiles.
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Patagonia -->
+                    <!-- Resumen en tabla -->
                     <div class="accordion-item mb-3 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia3">
-                                <strong><i class="bi bi-geo-alt"></i> Por qué la Patagonia</strong>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec3">
+                                <strong><i class="bi bi-table"></i> Resumen en USD</strong>
                             </button>
                         </h2>
-                        <div id="dia3" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                        <div id="sec3" class="accordion-collapse collapse" data-bs-parent="#potencialAccordion">
                             <div class="accordion-body">
-                                <p class="lead-copy">
-                                    La Patagonia reúne condiciones difíciles de replicar: vientos sostenidos, grandes superficies disponibles, acceso al Atlántico y provincias con necesidad de desarrollo industrial. Estas características permiten imaginar complejos exportadores ubicados cerca de los recursos naturales y de los puertos.
+                                <div class="table-responsive">
+                                    <table class="table table-bordered summary-table mb-3">
+                                        <thead>
+                                            <tr>
+                                                <th>Concepto</th>
+                                                <th>Valor aproximado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Potencial eólico anual</td>
+                                                <td>9.600 TWh</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Barriles de petróleo equivalentes</td>
+                                                <td>14.117.640.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Valor económico (67 USD/barril)</td>
+                                                <td>945.000.000.000 USD</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="lead-copy mb-0">
+                                    Esta relación subraya el enorme beneficio económico de desarrollar el potencial eólico: menos dependencia de fósiles y menores costos de importación o extracción para generar la misma electricidad.
                                 </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Santa Cruz, Chubut, Río Negro y Tierra del Fuego aparecen como zonas prioritarias.</li>
-                                    <li>Los puertos de Puerto Deseado, Comodoro Rivadavia, San Julián o Punta Colorada podrían ser nodos logísticos.</li>
-                                    <li>La desalinización de agua de mar permitiría producir hidrógeno sin competir con agua dulce continental.</li>
-                                    <li>La infraestructura común puede desarrollarse con esquemas público-privados.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- RIGI -->
-                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia4">
-                                <strong><i class="bi bi-bank"></i> RIGI e incentivos para invertir</strong>
-                            </button>
-                        </h2>
-                        <div id="dia4" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
-                            <div class="accordion-body">
-                                <p class="lead-copy">
-                                    El proyecto propone usar el RIGI como herramienta central para atraer inversión directa extranjera y capital nacional. El régimen ofrece estabilidad fiscal y regulatoria, beneficios impositivos, libre disponibilidad de divisas y reglas de largo plazo para proyectos de gran escala.
-                                </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Declarar al hub de interés nacional estratégico.</li>
-                                    <li>Crear una ventanilla única para aprobar proyectos integrados con velocidad.</li>
-                                    <li>Invitar a las provincias patagónicas a sumar incentivos locales.</li>
-                                    <li>Promocionar internacionalmente la fórmula: viento patagónico más RIGI igual a fertilizantes verdes competitivos.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Ahorro argentino -->
-                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia5">
-                                <strong><i class="bi bi-cash-coin"></i> Dólares del colchón y fondo de inversión</strong>
-                            </button>
-                        </h2>
-                        <div id="dia5" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
-                            <div class="accordion-body">
-                                <p class="lead-copy">
-                                    Una parte importante del proyecto consiste en canalizar ahorros argentinos en dólares hacia inversión productiva. Para eso se propone crear un fondo fiduciario o vehículo financiero que permita participar con montos mucho menores que los requeridos para un gran proyecto RIGI individual.
-                                </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Fondo Patagonia Green Ammonia con suscripciones en dólares.</li>
-                                    <li>Participación de pequeños y medianos inversores nacionales.</li>
-                                    <li>Beneficios fiscales si el capital permanece invertido varios años.</li>
-                                    <li>Transformación de dólares ociosos en empleo, exportaciones e infraestructura.</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -245,66 +230,72 @@
                     <!-- Vaca Muerta -->
                     <div class="accordion-item mb-3 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec4">
                                 <strong><i class="bi bi-bar-chart"></i> Comparación con Vaca Muerta</strong>
                             </button>
                         </h2>
-                        <div id="dia6" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                        <div id="sec4" class="accordion-collapse collapse" data-bs-parent="#potencialAccordion">
                             <div class="accordion-body">
                                 <p class="lead-copy">
-                                    El análisis compara este hub con Vaca Muerta porque ambos son proyectos patagónicos de gran escala, orientados a generar exportaciones, inversión y divisas. La diferencia central es que Vaca Muerta se basa en hidrocarburos, mientras que el Green Ammonia Hub apunta a una cadena industrial net-zero.
+                                    Hacia 2028 se proyecta que Vaca Muerta supere el millón de barriles diarios de petróleo crudo, es decir unos 365 millones de barriles anuales. Si se comparan los 14.117 millones de barriles equivalentes al potencial eólico patagónico con esa producción anual de Vaca Muerta, el cociente es de aproximadamente <strong>39 veces</strong> la producción anual de Vaca Muerta en términos energéticos equivalentes.
                                 </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Ambos necesitan estabilidad regulatoria, infraestructura y participación provincial.</li>
-                                    <li>Vaca Muerta ya demostró que los grandes proyectos pueden atraer capital si hay reglas claras.</li>
-                                    <li>El hub verde podría captar financiamiento climático internacional.</li>
-                                    <li>Un proyecto exitoso podría mejorar la percepción de riesgo país al generar divisas genuinas.</li>
-                                </ul>
+                                <p class="lead-copy mb-0">
+                                    La comparación no implica que todo el viento se convierta de inmediato en electricidad exportable, pero sí muestra la escala extraordinaria del recurso frente al principal polo hidrocarburífero argentino.
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Tecnología -->
+                    <!-- PBI -->
                     <div class="accordion-item mb-3 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia7">
-                                <strong><i class="bi bi-lightning-charge"></i> Tecnología: electrólisis capilar</strong>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec5">
+                                <strong><i class="bi bi-currency-dollar"></i> Comparación con el PBI</strong>
                             </button>
                         </h2>
-                        <div id="dia7" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                        <div id="sec5" class="accordion-collapse collapse" data-bs-parent="#potencialAccordion">
                             <div class="accordion-body">
                                 <p class="lead-copy">
-                                    El análisis destaca la electrólisis capilar como una innovación capaz de reducir el consumo eléctrico para producir hidrógeno verde. Esta tecnología evita pérdidas asociadas a burbujas en los electrodos y podría bajar el costo del hidrógeno en regiones con energía renovable muy barata, como la Patagonia.
+                                    El análisis contrasta los 945.000 millones de USD del potencial eléctrico teórico con un PBI nominal proyectado de Argentina de unos 746.840 millones de USD. La división da un factor de <strong>1,26</strong>, es decir un PBI completo más un 26 % adicional.
                                 </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Consumo estimado cercano a 40-41,5 kWh por kilo de hidrógeno.</li>
-                                    <li>Mejora potencial de 15 % a 20 % frente a tecnologías comerciales tradicionales.</li>
-                                    <li>Mayor competitividad del amoníaco verde frente al amoníaco gris.</li>
-                                    <li>Más atractivo para inversores, compradores internacionales y financiamiento verde.</li>
-                                </ul>
+                                <p class="lead-copy mb-0">
+                                    Expresado de otro modo: el valor teórico anual del viento patagónico, convertido a equivalencia petrolera, superaría el tamaño del PBI argentino en esa proyección.
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Beneficios -->
+                    <!-- Producción diaria -->
                     <div class="accordion-item mb-3 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia8">
-                                <strong><i class="bi bi-graph-up-arrow"></i> Beneficios esperados</strong>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec6">
+                                <strong><i class="bi bi-calendar-day"></i> Un día de viento en la Patagonia</strong>
                             </button>
                         </h2>
-                        <div id="dia8" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                        <div id="sec6" class="accordion-collapse collapse" data-bs-parent="#potencialAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy mb-0">
+                                    Si se reparte el valor anual de 945.000 millones de USD entre 365 días, se obtiene aproximadamente <strong>2.589 millones de USD por día</strong>. En otras palabras, eso representaría lo que produciría un día de viento en la Patagonia, según las cifras del estudio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nuclear -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sec7">
+                                <strong><i class="bi bi-radioactive"></i> Comparación con energía nuclear</strong>
+                            </button>
+                        </h2>
+                        <div id="sec7" class="accordion-collapse collapse" data-bs-parent="#potencialAccordion">
                             <div class="accordion-body">
                                 <p class="lead-copy">
-                                    Si Argentina logra ejecutar esta estrategia con foco y velocidad, la Patagonia podría convertirse en un polo exportador de fertilizantes ecológicos y derivados del hidrógeno verde. El beneficio no sería solamente ambiental, sino también industrial, fiscal, financiero y geopolítico.
+                                    La flota mundial de unos 440 reactores nucleares genera entre 2.600 y 2.700 TWh al año. El potencial patagónico teórico equivaldría a unas <strong>3,5 a 4 veces</strong> la producción nuclear mundial actual, o más de mil grandes reactores operando a plena carga.
                                 </p>
-                                <ul class="topic-list mb-0">
-                                    <li>Exportaciones por miles de millones de dólares anuales.</li>
-                                    <li>Creación de empleo calificado y desarrollo regional.</li>
-                                    <li>Mayor infraestructura portuaria, energética y logística.</li>
-                                    <li>Menor dependencia de combustibles fósiles y fertilizantes importados.</li>
-                                    <li>Posible reducción del riesgo país al demostrar capacidad de atraer inversión productiva de largo plazo.</li>
-                                </ul>
+                                <p class="lead-copy mb-0">
+                                    En síntesis: el recurso eólico patagónico es enorme a escala global, pero su desarrollo pleno exige resolver transmisión, almacenamiento y la relación entre demanda local y exportación.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -313,11 +304,11 @@
 
                 <!-- Botones finales -->
                 <div class="text-center mt-5 d-flex flex-column flex-md-row gap-3 justify-content-center">
-                    <a href="documentos/Patagonia%20Green%20Ammonia%20Hub.pdf" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
+                    <a href="documentos/Potencial%20viento%20patagonia.pdf" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
                         <i class="bi bi-file-earmark-pdf"></i> Documento completo (PDF)
                     </a>
-                    <a href="#" class="btn btn-outline-light btn-lg px-4">
-                        Volver arriba
+                    <a href="green-ammonia-hub.html" class="btn btn-outline-light btn-lg px-4">
+                        <i class="bi bi-flask"></i> Programa Patagonia Green Ammonia Hub
                     </a>
                 </div>
 
@@ -327,7 +318,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark py-4 text-center text-light">
-        <p class="mb-0">Viento Argentino — Energía eólica, hidrógeno verde y desarrollo argentino</p>
+        <p class="mb-0">Viento Argentino — Potencial eólico y riqueza energética argentina</p>
     </footer>
 
     <!-- Bootstrap JS -->

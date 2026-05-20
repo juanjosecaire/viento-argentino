@@ -1,3 +1,15 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/potencial-eolico",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/potencial-eolico.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
