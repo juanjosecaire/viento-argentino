@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viento Argentino | Energía eólica y amoníaco verde en la Patagonia</title>
+    <meta name="description" content="Propuesta para transformar el viento patagónico en hidrógeno verde, amoníaco verde y fertilizantes ecológicos. Hub industrial, marco RIGI e inversión nacional en la Patagonia.">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: rgba(15, 23, 42, 0.95) !important;
+        }
+        .hero-card,
+        .accordion-item {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .accordion-button {
+            background: #1e40af;
+            color: white;
+            font-weight: 600;
+        }
+        .accordion-button:not(.collapsed) {
+            background: #3b82f6;
+            color: white;
+        }
+        .accordion-button::after {
+            filter: brightness(0) invert(1);
+        }
+        .accordion-body {
+            color: #f8fafc;
+        }
+        .accordion-body p,
+        .accordion-body li {
+            color: #f8fafc;
+        }
+        .lead-copy {
+            text-align: justify;
+            line-height: 1.75;
+        }
+        .metric-card {
+            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 0.75rem;
+            height: 100%;
+        }
+        .metric-card strong {
+            color: #93c5fd;
+            display: block;
+            font-size: 1.45rem;
+        }
+        .topic-list li {
+            margin-bottom: 0.65rem;
+        }
+        .btn-primary {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="bi bi-wind"></i> Viento Argentino
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="potencial-eolico.html">Potencial eólico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rutinaAccordion">Proyecto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <!-- Header -->
+                <div class="hero-card rounded-4 p-4 p-md-5 text-center mb-5">
+                    <h1 class="display-4 fw-bold mb-3">Viento Argentino</h1>
+                    <p class="lead mb-4">Una propuesta para transformar el viento patagónico en energía, hidrógeno verde, amoníaco verde y fertilizantes ecológicos competitivos para el mundo.</p>
+                    <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+                        <a href="#rutinaAccordion" class="btn btn-primary btn-lg px-4">
+                            Ver resumen del proyecto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Indicadores -->
+                <div class="row g-3 mb-5">
+                    <div class="col-md-4">
+                        <div class="metric-card p-4 text-center">
+                            <strong>0,2 %</strong>
+                            <span>del potencial eólico patagónico estaría actualmente aprovechado, según el planteo del proyecto.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="metric-card p-4 text-center">
+                            <strong>5-15 GW</strong>
+                            <span>de nueva capacidad eólica propuesta para una primera escala industrial del hub.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="metric-card p-4 text-center">
+                            <strong>30 años</strong>
+                            <span>de estabilidad fiscal y regulatoria posible bajo el régimen RIGI.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion -->
+                <div class="accordion" id="rutinaAccordion">
+
+                    <!-- Viento -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dia1">
+                                <strong><i class="bi bi-wind"></i> Viento: la mayor riqueza argentina</strong>
+                            </button>
+                        </h2>
+                        <div id="dia1" class="accordion-collapse collapse show" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy mb-3">
+                                    Para los especialistas en energía, el viento en la región Patagónica es uno de los mejores del mundo para producir energía eólica. Tiene promedios de velocidad muy superiores a la media mundial y una persistencia que puede superar el 50 % o 60 %.
+                                </p>
+                                <p class="lead-copy mb-3">
+                                    Además, la Patagonia cuenta con una disponibilidad de espacio prácticamente ilimitada para instalar parques eólicos, con menor oposición territorial que en regiones densamente pobladas como Europa. Esta combinación de viento, tierra y salida atlántica puede convertirse en una ventaja estratégica para Argentina.
+                                </p>
+                                <p class="lead-copy mb-0">
+                                    Esta web propone un plan para radicar industrias que quieran sustituir energías fósiles por energía eólica patagónica. La primera tarea es dimensionar la riqueza potencial del viento si se lo transforma en electricidad, hidrógeno verde, amoníaco verde y fertilizantes ecológicos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Green Ammonia Hub -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia2">
+                                <strong><i class="bi bi-flask"></i> Patagonia Green Ammonia Hub</strong>
+                            </button>
+                        </h2>
+                        <div id="dia2" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    El proyecto plantea crear un hub industrial para producir amoníaco verde a gran escala. El proceso parte de energía eólica, que alimenta electrolizadores para producir hidrógeno verde. Luego ese hidrógeno se combina con nitrógeno del aire para obtener amoníaco, base de fertilizantes ecológicos y posible combustible marítimo del futuro.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Producción integrada: parque eólico, electrólisis, síntesis de amoníaco y terminal de exportación.</li>
+                                    <li>Escala objetivo: entre 1 y 5 millones de toneladas anuales de amoníaco verde en etapas maduras.</li>
+                                    <li>Mercados posibles: Europa y Asia, donde crece la demanda de productos bajos en carbono.</li>
+                                    <li>Ventaja ambiental: reducción casi total de emisiones frente al amoníaco gris producido con gas fósil.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Patagonia -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia3">
+                                <strong><i class="bi bi-geo-alt"></i> Por qué la Patagonia</strong>
+                            </button>
+                        </h2>
+                        <div id="dia3" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    La Patagonia reúne condiciones difíciles de replicar: vientos sostenidos, grandes superficies disponibles, acceso al Atlántico y provincias con necesidad de desarrollo industrial. Estas características permiten imaginar complejos exportadores ubicados cerca de los recursos naturales y de los puertos.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Santa Cruz, Chubut, Río Negro y Tierra del Fuego aparecen como zonas prioritarias.</li>
+                                    <li>Los puertos de Puerto Deseado, Comodoro Rivadavia, San Julián o Punta Colorada podrían ser nodos logísticos.</li>
+                                    <li>La desalinización de agua de mar permitiría producir hidrógeno sin competir con agua dulce continental.</li>
+                                    <li>La infraestructura común puede desarrollarse con esquemas público-privados.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGI -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia4">
+                                <strong><i class="bi bi-bank"></i> RIGI e incentivos para invertir</strong>
+                            </button>
+                        </h2>
+                        <div id="dia4" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    El proyecto propone usar el RIGI como herramienta central para atraer inversión directa extranjera y capital nacional. El régimen ofrece estabilidad fiscal y regulatoria, beneficios impositivos, libre disponibilidad de divisas y reglas de largo plazo para proyectos de gran escala.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Declarar al hub de interés nacional estratégico.</li>
+                                    <li>Crear una ventanilla única para aprobar proyectos integrados con velocidad.</li>
+                                    <li>Invitar a las provincias patagónicas a sumar incentivos locales.</li>
+                                    <li>Promocionar internacionalmente la fórmula: viento patagónico más RIGI igual a fertilizantes verdes competitivos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ahorro argentino -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia5">
+                                <strong><i class="bi bi-cash-coin"></i> Dólares del colchón y fondo de inversión</strong>
+                            </button>
+                        </h2>
+                        <div id="dia5" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    Una parte importante del proyecto consiste en canalizar ahorros argentinos en dólares hacia inversión productiva. Para eso se propone crear un fondo fiduciario o vehículo financiero que permita participar con montos mucho menores que los requeridos para un gran proyecto RIGI individual.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Fondo Patagonia Green Ammonia con suscripciones en dólares.</li>
+                                    <li>Participación de pequeños y medianos inversores nacionales.</li>
+                                    <li>Beneficios fiscales si el capital permanece invertido varios años.</li>
+                                    <li>Transformación de dólares ociosos en empleo, exportaciones e infraestructura.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vaca Muerta -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia6">
+                                <strong><i class="bi bi-bar-chart"></i> Comparación con Vaca Muerta</strong>
+                            </button>
+                        </h2>
+                        <div id="dia6" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    El análisis compara este hub con Vaca Muerta porque ambos son proyectos patagónicos de gran escala, orientados a generar exportaciones, inversión y divisas. La diferencia central es que Vaca Muerta se basa en hidrocarburos, mientras que el Green Ammonia Hub apunta a una cadena industrial net-zero.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Ambos necesitan estabilidad regulatoria, infraestructura y participación provincial.</li>
+                                    <li>Vaca Muerta ya demostró que los grandes proyectos pueden atraer capital si hay reglas claras.</li>
+                                    <li>El hub verde podría captar financiamiento climático internacional.</li>
+                                    <li>Un proyecto exitoso podría mejorar la percepción de riesgo país al generar divisas genuinas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tecnología -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia7">
+                                <strong><i class="bi bi-lightning-charge"></i> Tecnología: electrólisis capilar</strong>
+                            </button>
+                        </h2>
+                        <div id="dia7" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    El análisis destaca la electrólisis capilar como una innovación capaz de reducir el consumo eléctrico para producir hidrógeno verde. Esta tecnología evita pérdidas asociadas a burbujas en los electrodos y podría bajar el costo del hidrógeno en regiones con energía renovable muy barata, como la Patagonia.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Consumo estimado cercano a 40-41,5 kWh por kilo de hidrógeno.</li>
+                                    <li>Mejora potencial de 15 % a 20 % frente a tecnologías comerciales tradicionales.</li>
+                                    <li>Mayor competitividad del amoníaco verde frente al amoníaco gris.</li>
+                                    <li>Más atractivo para inversores, compradores internacionales y financiamiento verde.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beneficios -->
+                    <div class="accordion-item mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dia8">
+                                <strong><i class="bi bi-graph-up-arrow"></i> Beneficios esperados</strong>
+                            </button>
+                        </h2>
+                        <div id="dia8" class="accordion-collapse collapse" data-bs-parent="#rutinaAccordion">
+                            <div class="accordion-body">
+                                <p class="lead-copy">
+                                    Si Argentina logra ejecutar esta estrategia con foco y velocidad, la Patagonia podría convertirse en un polo exportador de fertilizantes ecológicos y derivados del hidrógeno verde. El beneficio no sería solamente ambiental, sino también industrial, fiscal, financiero y geopolítico.
+                                </p>
+                                <ul class="topic-list mb-0">
+                                    <li>Exportaciones por miles de millones de dólares anuales.</li>
+                                    <li>Creación de empleo calificado y desarrollo regional.</li>
+                                    <li>Mayor infraestructura portuaria, energética y logística.</li>
+                                    <li>Menor dependencia de combustibles fósiles y fertilizantes importados.</li>
+                                    <li>Posible reducción del riesgo país al demostrar capacidad de atraer inversión productiva de largo plazo.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botones finales -->
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-outline-light btn-lg px-4">
+                        Volver arriba
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-4 text-center text-light">
+        <p class="mb-0">Viento Argentino — Energía eólica, hidrógeno verde y desarrollo argentino</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
