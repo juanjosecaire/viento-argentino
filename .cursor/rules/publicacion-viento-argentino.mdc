@@ -23,14 +23,13 @@ Código local → git push (rama main) → GitHub → Vercel (deploy automático
 | **Config Vercel** | Framework **Other**, Build Command vacío, Output Directory `.` |
 | **URLs limpias** | `vercel.json` con `"cleanUrls": true` → `/potencial-eolico` sirve `potencial-eolico.html` |
 
-No versionar `documentos/` (PDFs locales); está en `.gitignore`.
-
 ## Estructura actual del sitio
 
 - `index.html` — portada (`/`)
 - `potencial-eolico.html` — potencial eólico (`/potencial-eolico`)
+- `documentos/` — PDFs publicados en producción
 
-Marca visible: **Viento Argentino**. No enlazar ni ofrecer descarga de PDFs.
+Marca visible: **Viento Argentino**. Cada página enlaza su PDF en `documentos/` (usar `%20` en URLs si el nombre tiene espacios).
 
 ## Checklist antes de cada publicación
 
@@ -43,7 +42,8 @@ Marca visible: **Viento Argentino**. No enlazar ni ofrecer descarga de PDFs.
 3. **Enlaces** — Verificar en todas las páginas:
    - Brand → `/` o `index.html`
    - Enlaces internos coherentes con `cleanUrls` (p. ej. `potencial-eolico.html` o `/potencial-eolico`)
-   - Sin enlaces rotos a `nuevo0.html`, `nuevo1.html`, `documentos/*.pdf` ni rutas obsoletas
+   - Sin enlaces rotos a `nuevo0.html`, `nuevo1.html` ni rutas obsoletas
+   - PDFs accesibles: `documentos/Patagonia%20Green%20Ammonia%20Hub.pdf` (portada) y `documentos/Potencial%20viento%20patagonia.pdf` (potencial eólico)
    - Botones del hero y footer apuntan a secciones o páginas válidas
 4. **Git** — Solo commitear si el usuario lo pide explícitamente:
    ```bash
