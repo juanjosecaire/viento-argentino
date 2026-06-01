@@ -3,6 +3,12 @@
 
     var STORAGE_KEY = 'viento-argentino-lang';
     var DEFAULT_LANG = 'es';
+    var ASYNC_LOCALES = {
+        fr: 'js/locales/fr.json',
+        de: 'js/locales/de.json',
+        it: 'js/locales/it.json',
+        no: 'js/locales/no.json'
+    };
 
     var strings = {
         es: {
@@ -217,9 +223,16 @@
         }
     };
 
+    function hasLocale(lang) {
+        return Boolean(strings[lang]);
+    }
+
     function getLang() {
         var stored = localStorage.getItem(STORAGE_KEY);
-        return strings[stored] ? stored : DEFAULT_LANG;
+        if (stored && (hasLocale(stored) || ASYNC_LOCALES[stored])) {
+            return stored;
+        }
+        return DEFAULT_LANG;
     }
 
     function t(key, lang) {
@@ -230,10 +243,32 @@
         if (strings[DEFAULT_LANG][key] !== undefined) {
             return strings[DEFAULT_LANG][key];
         }
+        if (strings.en && strings.en[key] !== undefined) {
+            return strings.en[key];
+        }
         return '';
     }
 
-    function applyLang(lang) {
+    function loadLocale(lang) {
+        if (hasLocale(lang) || !ASYNC_LOCALES[lang]) {
+            return Promise.resolve();
+        }
+        return fetch(ASYNC_LOCALES[lang])
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('Locale not found: ' + lang);
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                strings[lang] = data;
+            })
+            .catch(function () {
+                strings[lang] = strings.en || strings[DEFAULT_LANG];
+            });
+    }
+
+    function applyLangSync(lang) {
         localStorage.setItem(STORAGE_KEY, lang);
         document.documentElement.lang = lang;
 
@@ -271,6 +306,12 @@
         if (toggle) {
             toggle.setAttribute('aria-label', t('common.nav.language', lang));
         }
+    }
+
+    function applyLang(lang) {
+        return loadLocale(lang).then(function () {
+            applyLangSync(lang);
+        });
     }
 
     function init() {

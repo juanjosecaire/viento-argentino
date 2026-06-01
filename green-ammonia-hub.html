@@ -77,6 +77,10 @@
             color: #fff;
             background-color: rgba(255, 255, 255, 0.12);
         }
+        .lang-switcher .dropdown-menu {
+            max-height: 18rem;
+            overflow-y: auto;
+        }
         .lang-switcher .dropdown-item.active {
             background-color: #2563eb;
             color: #fff;
@@ -109,8 +113,12 @@
                             <i class="bi bi-globe2"></i> <span data-i18n="common.nav.language">Idioma</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="langDropdown">
-                            <li><button type="button" class="dropdown-item active" data-set-lang="es" data-i18n="common.lang.es">Español</button></li>
-                            <li><button type="button" class="dropdown-item" data-set-lang="en" data-i18n="common.lang.en">English</button></li>
+                            <li><button type="button" class="dropdown-item active" data-set-lang="es">Español</button></li>
+                            <li><button type="button" class="dropdown-item" data-set-lang="en">English</button></li>
+                            <li><button type="button" class="dropdown-item" data-set-lang="fr">Français</button></li>
+                            <li><button type="button" class="dropdown-item" data-set-lang="de">Deutsch</button></li>
+                            <li><button type="button" class="dropdown-item" data-set-lang="it">Italiano</button></li>
+                            <li><button type="button" class="dropdown-item" data-set-lang="no">Norsk</button></li>
                         </ul>
                     </li>
                 </ul>
