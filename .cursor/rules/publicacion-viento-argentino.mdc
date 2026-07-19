@@ -27,6 +27,7 @@ Código local → git push (rama main) → GitHub → Vercel (deploy automático
 
 - `index.html` — potencial eólico, inicio del sitio (`/`)
 - `green-ammonia-hub.html` — programa Patagonia Green Ammonia Hub (`/green-ammonia-hub`)
+- `se-hace-camino-al-andar.html` — proyecto Se hace camino al andar (`/se-hace-camino-al-andar`)
 - `documentos/` — PDFs publicados en producción
 
 Redirección permanente: `/potencial-eolico` → `/`.
@@ -45,7 +46,7 @@ Marca visible: **Viento Argentino**. Cada página enlaza su PDF en `documentos/`
    - Brand → `/` o `index.html`
    - Enlaces internos coherentes con `cleanUrls` (p. ej. `green-ammonia-hub.html` o `/green-ammonia-hub`)
    - Sin enlaces rotos a `potencial-eolico.html`, `nuevo0.html`, `nuevo1.html` ni rutas obsoletas
-   - PDFs accesibles: `documentos/Potencial%20viento%20patagonia.pdf` (portada `/`) y `documentos/Patagonia%20Green%20Ammonia%20Hub.pdf` (hub)
+   - PDFs accesibles: `documentos/Potencial%20viento%20patagonia.pdf` (portada `/`), `documentos/Patagonia%20Green%20Ammonia%20Hub.pdf` (hub) y `documentos/Potencial%20E%C3%B3lico%20Patagonia%20(3).pdf` (camino al andar)
    - Botones del hero y footer apuntan a secciones o páginas válidas
 4. **Git** — Solo commitear si el usuario lo pide explícitamente:
    ```bash
